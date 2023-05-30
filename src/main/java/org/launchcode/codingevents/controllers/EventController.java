@@ -17,8 +17,14 @@ public class EventController {
         events.add("Code Til Dawn");
         events.add("Code With Pride");
         events.add("Emo Night");
-        events.add("FLower Bar");
+        events.add("Flower Bar");
         model.addAttribute("events", events);
         return "events/index"; //need to refer to directory that template is in when calling it
     }
+    //this method lives at /events/create
+    @GetMapping("create")
+    public String renderCreateEventForm() {
+        return "events/create";
+    }
+
 }
