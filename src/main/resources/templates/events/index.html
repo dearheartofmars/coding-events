@@ -6,7 +6,10 @@
     <title>Coding Events</title>
 </head>
 <body>
-<h1>Coding Events</h1>
+<h1>All Events</h1>
+
+<p th:unless="${events} and ${events.size()}">No Events!</pth:unless>
+<!--if there are events display them, if there are not, display No Events-->
 
 <ul>
     <th:block th:each="event : ${events}">
